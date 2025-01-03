@@ -1,0 +1,173 @@
+
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header Section */
+h2 {
+    background-color: #A9BFA8;
+    color: #3A3960;
+    padding: 20px;
+    margin: 0;
+    border-radius: 6px 6px 0 0;
+    text-align: center;
+}
+
+/* Hero Section */
+.bg-blue-500 {
+    background-color:#7E99A3;
+}
+
+.text-white {
+    color: white;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+    border-radius: 12px;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: black;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+    color: black;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.text-blue-500 {
+    color: #3A3960;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.hover\:bg-gray-200:hover {
+    background-color: #ecf0f1;
+}
+
+/* Categories Section */
+
+h3{
+    margin-top: 20px;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.text-gray-800 {
+    color: #2c3e50;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.md\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+    color: black;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.text-gray-700 {
+    color: #7f8c8d;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+/* Featured Products Section */
+.text-gray-500 {
+    color: #95a5a6;
+}
+
+.bg-blue-500 {
+    background-color: #7E99A3;
+}
+
+.hover\:bg-blue-600:hover {
+    background-color: #1f618d;
+}
+
+/* Promotions Section */
+.bg-yellow-100 {
+    background-color: #fcf3cf;
+}
+
+.text-yellow-900 {
+    color: #7d6608;
+}
+
+.bg-yellow-500 {
+    background-color: #79975b;
+}
+
+.hover\:bg-yellow-600:hover {
+    background-color: #FAFFC5;
+}
+
+/*image size*/
+
+.w-24{
+    width:50px;
+    height: 50px;
+}
