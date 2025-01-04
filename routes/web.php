@@ -7,6 +7,9 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CartItemsController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -47,6 +50,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () { 
     return view('dashboard'); 
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
+Route::get('/contactus', [ContactUsController::class, 'index'])->name('contactus');
 
 Route::middleware(['auth'])->group(function () { 
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit'); 

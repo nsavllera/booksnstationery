@@ -11,7 +11,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
                 <h1 class="text-2xl font-bold">{{ $product->name }}</h1>
                 <p class="mt-4">{{ $product->description }}</p>
-                <p class="mt-2 font-semibold">Price: {{ $product->price }}</p>
+                <p class="mt-2 font-semibold">Price: RM {{ $product->price }}</p>
                 @if ($product->image)
                     <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="mt-4 w-72">
                 @else
@@ -24,7 +24,7 @@
                         Add to Cart
                     </button>
                 </form>
-                <a href="{{ route('products.customerIndex') }}" class="mt-4 inline-block text-blue-600 hover:underline">
+                <a href="{{ route('product.customerIndex') }}" class="mt-4 inline-block text-blue-600 hover:underline">
                     Back to Products
                 </a>
             </div>

@@ -21,6 +21,16 @@
                                         {{ __('Products') }}
                     </x-nav-link>
 
+                    <!-- about us link -->
+                    <x-nav-link :href="route('aboutus')" :active="request()->routeIs('aboutus')">
+                                        {{ __('About Us') }}
+                    </x-nav-link>
+
+                    <!-- contact us link -->
+                    <x-nav-link :href="route('contactus')" :active="request()->routeIs('contactus')">
+                                        {{ __('Contact Us') }}
+                    </x-nav-link>
+
                     <!-- Cart Link -->
                     <x-nav-link :href="route('cart.index')" :active="request()->routeIs('cart.index')">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="width: 20px; height: 20px; margin-top:5px; fill: #000;">
@@ -58,6 +68,11 @@
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
+
+                        <x-dropdown-link :href="route('myorders')">
+                            {{ __('My Orders') }}
+                        </x-dropdown-link>
+
                     </x-slot>
                 </x-dropdown>
             </div>
@@ -85,6 +100,16 @@
             <!-- product link -->
             <x-nav-link :href="route('product.customerIndex')" :active="request()->routeIs('product.customerIndex')">
                  {{ __('Products') }}
+            </x-nav-link>
+
+            <!-- about us link -->
+            <x-nav-link :href="route('aboutus')" :active="request()->routeIs('aboutus')">
+                {{ __('About Us') }}
+            </x-nav-link>
+
+            <!-- contact us link -->
+            <x-nav-link :href="route('contactus')" :active="request()->routeIs('contactus')">
+                {{ __('Contact Us') }}
             </x-nav-link>
 
             <!-- Cart Link in Mobile Menu -->

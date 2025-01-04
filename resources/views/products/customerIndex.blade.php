@@ -22,8 +22,8 @@
                         @foreach ($books as $product)
                         <div class="bg-white shadow rounded-lg p-4">
                             <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-40 object-cover rounded-lg">
-                            <h4 class="mt-2 text-blue-900 font-medium">{{ $product->name }}</h4>
-                            <p class="text-gray-900">${{ number_format($product->price, 2) }}</p>
+                            <a href="{{route('product.show', $product->id)}}" class="mt-2 text-blue-900 font-medium">{{ $product->name }}</a>
+                            <p class="text-gray-900">RM {{ number_format($product->price, 2) }}</p>
                             <!-- Add to Cart Form -->
                             <form action="{{ route('cart.add', $product->id) }}" method="POST" class="mt-2">
                                 @csrf
@@ -42,8 +42,8 @@
                         @foreach ($stationeries as $product)
                         <div class="bg-white shadow rounded-lg p-4">
                             <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-40 object-cover rounded-lg">
-                            <h4 class="mt-2 text-blue-900 font-medium">{{ $product->name }}</h4>
-                            <p class="text-gray-900">${{ number_format($product->price, 2) }}</p>
+                            <a href="{{route('product.show', $product->id)}}" class="mt-2 text-blue-900 font-medium">{{ $product->name }}</a>
+                            <p class="text-gray-900">RM {{ number_format($product->price, 2) }}</p>
                             <!-- Add to Cart Form -->
                             <form action="{{ route('cart.add', $product->id) }}" method="POST" class="mt-2">
                                 @csrf
