@@ -43,12 +43,12 @@ class OrderController extends Controller
                 'subtotal' => $cartItem->subtotal_price,
             ]);
 
-            $cartItem->quantity -= 1;
-            if ($cartItem->quantity > 0) {
+            $cartItem->delete();
+            /*if ($cartItem->quantity > 0) {
                 $cartItem->save();
             } else {
                 $cartItem->delete();
-            }
+            }*/
         }
 
         // Redirect to /myorders

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\OrderItem;
+use App\Models\ContactUs;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -12,7 +12,8 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        //
+
+        return view('contactus');
     }
 
     /**
@@ -28,13 +29,21 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contacts = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'required|string',
+        ]);
+
+        ContactUs::create($request->all());
+
+        return redirect()->back()->with('success', 'Message sent successfully!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(OrderItem $orderItem)
+    public function show(ContactUs $contactUs)
     {
         //
     }
@@ -42,7 +51,7 @@ class ContactUsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(OrderItem $orderItem)
+    public function edit(ContactUs $contactUs)
     {
         //
     }
@@ -50,7 +59,7 @@ class ContactUsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, OrderItem $orderItem)
+    public function update(Request $request, ContactUs $contactUs)
     {
         //
     }
@@ -58,7 +67,7 @@ class ContactUsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OrderItem $orderItem)
+    public function destroy(ContactUs $contactUs)
     {
         //
     }

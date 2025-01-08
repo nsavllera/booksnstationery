@@ -55,6 +55,7 @@
             <form action="{{ route('checkout.index') }}" method="GET">
                 <table class="w-full table-auto text-left">
                     <tr>
+                    <th></th>
                     <th class="text-left px-4 py-2">Name</th>
                     <th class="text-left px-4 py-2">Quantity</th>
                     <th class="text-left px-4 py-2">Price</th>

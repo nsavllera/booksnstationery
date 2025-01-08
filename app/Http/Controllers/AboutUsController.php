@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\OrderItem;
+use App\Models\AboutUs;
 use Illuminate\Http\Request;
 
 class AboutUsController extends Controller
@@ -12,7 +12,7 @@ class AboutUsController extends Controller
      */
     public function index()
     {
-        //
+        return view('aboutus');
     }
 
     /**
@@ -34,7 +34,7 @@ class AboutUsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(OrderItem $orderItem)
+    public function show(AboutUs $aboutUs)
     {
         //
     }
@@ -42,7 +42,7 @@ class AboutUsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(OrderItem $orderItem)
+    public function edit(AboutUs $aboutUs)
     {
         //
     }
@@ -50,7 +50,7 @@ class AboutUsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, OrderItem $orderItem)
+    public function update(Request $request, AboutUs $aboutUs)
     {
         //
     }
@@ -58,7 +58,7 @@ class AboutUsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OrderItem $orderItem)
+    public function destroy(AboutUs $aboutUs)
     {
         //
     }

@@ -171,3 +171,160 @@ h3{
     width:50px;
     height: 50px;
 }
+
+/* General Styles */
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    color: #2c3e50;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.feature-card {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    color: #333;
+    flex: 1; 
+    max-width: 300px; 
+    min-width: 250px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2em;
+    color: #f39c12;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #2c3e50;
+    color: #fff;
+    margin-top: 20px;
+}
+
+footer .footer-content a {
+    color: #f39c12;
+    margin: 0 5px;
+}
+
+footer .footer-content a:hover {
+    color: #fff;
+}
+
+/* Fancy Background Section */
+.fancy-bg {
+    background: linear-gradient(to right, #4f6d7a, #a8d5ba); /* Gray-blue to mint green gradient */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background: #2c3e50;
+}
+
+.team {
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 25%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-info {
+    text-align: left;
+}
+
+.team-info h3 {
+    margin: 0;
+    color: black;
+}
+
+.team-info p {
+    margin: 5px 0 0 0;
+    color: grey;
+}

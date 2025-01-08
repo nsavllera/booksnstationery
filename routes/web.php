@@ -9,7 +9,6 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CartItemsController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -52,11 +51,15 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
+
 Route::get('/contactus', [ContactUsController::class, 'index'])->name('contactus');
+
+Route::post('/send-message', [ContactUsController::class, 'store']);
 
 Route::middleware(['auth'])->group(function () { 
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit'); 
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update'); 
+    Route::post('/profile/delete', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 Route::get('/admin/product', [ProductController::class, 'index'])->name('product.index');
@@ -88,3 +91,4 @@ Route::get('/myorders', [OrderController::class, 'myOrders'])->name('myorders');
 
 Route::get('/admin/orders', [OrderController::class, 'index'])->name('admin.orders');
 Route::post('/admin/orders/{order}/update-status', [OrderController::class, 'updateStatus'])->name('admin.orders.update-status');
+
